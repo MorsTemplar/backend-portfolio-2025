@@ -13,6 +13,8 @@ const app = express();
 app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(express.json());
 
+app.use('/images', express.static('public/images'));
+
 app.use('/api/education', educationRoutes);
 app.use('/api/projects', projectRoutes);
 
